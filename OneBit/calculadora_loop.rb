@@ -7,8 +7,7 @@ marcador = "=" * 20
 
 loop do
   unless resultado == ''
-    puts "O resultado da operação entre #{num_denominador} e #{num_nomimador} foi: #{resultado}"
-    puts #Mais uma quebra de linha para ficar visível o Resultado da operação
+    puts "\n O resultado da operação entre #{num_denominador} e #{num_nomimador} foi: #{resultado}"
     resultado = ''
   end
   unless msg_opcao_invalida == ''
