@@ -1,0 +1,5 @@
+#Declaração da variável %%nome%%ts "Digite o nome do restaurante"
+nome = get
+print "Nome do restaurante: "
+p nome<<" teste"
+
