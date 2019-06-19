@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'os'
+gem 'cpf_cnpj'
 #Todas gems colocadas a baixo será instalada ao ser executado "bundle"
 
 #Este arquivo é responsável por conter todas dependências de gems
