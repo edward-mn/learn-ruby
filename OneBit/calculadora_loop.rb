@@ -58,3 +58,20 @@ loop do
   end
   system 'clear'
 end
+
+#Método de potenciação com Input do usuário
+=begin
+def potenciacao(numero, expoente)
+  unless numero == 0 && expoente == 0
+    puts "O resultado de #{numero} elevado a #{expoente} foi: #{numero**expoente}"
+  else
+    puts 'Desculpa, mas é impossível fazer a potenciação sem números'
+  end
+end
+
+print 'Digite o número a ser elevado: '
+numero = gets.chomp.to_i
+print 'Agora digite o número do expoente: '
+expoente = gets.chomp.to_i
+potenciacao(numero, expoente)
+=end
