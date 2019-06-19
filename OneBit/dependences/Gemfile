@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+gem 'os'
+#Todas gems colocadas a baixo será instalada ao ser executado "bundle"
+
+#Este arquivo é responsável por conter todas dependências de gems
+#Apenas com o comando "bundle" dentro deste diretório, será instalada todas dependências desse projeto
