@@ -24,4 +24,4 @@ puts "A posição do hash de maior valor foi \n Chave: #{highest_position_hash.k
 #Outra opção para pegar o conjunto (Key: Value) filtrando apartir do maior Value
 key = hash_numeros.sort{|a,b| a[1] <=> b[1]}.last[0]
 value = hash_numeros.sort{|a,b| a[1] <=> b[1]}.last[1]
-puts "Tste: #{key} e Value: #{value}" 
+puts "Key = #{key} e Value = #{value}" 
