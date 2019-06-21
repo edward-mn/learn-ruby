@@ -26,6 +26,7 @@ key = hash_numeros.sort{|a,b| a[1] <=> b[1]}.last[0]
 value = hash_numeros.sort{|a,b| a[1] <=> b[1]}.last[1]
 puts "Key = #{key} e Value = #{value}" 
 
+=begin
 numbers = {a: 10, b: 30, c: 20, d: 25, e: 15}
  
 maior_numero = 0
@@ -39,3 +40,4 @@ numbers.each do |key, value|
 end
  
 puts "O maior número é o da chave #{result[0]} com o valor #{result[1]}"
+=end
