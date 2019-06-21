@@ -62,7 +62,7 @@ novo_usuario.adicionar_usuario('Edward')
 =end
 
 class Dog
-  attr_accessor :name, :age #atributos (simples pode ler e escrever)
+  attr_accessor :name, :age #atributos (simples - pode ler e escrever)
 end
 
 my_dog = Dog.new
