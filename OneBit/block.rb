@@ -44,3 +44,21 @@ def bloco_metodo(name, &block) #Só podemos passar um bloco por método
 end
 
 bloco_metodo('Edward') {puts "Olá #{@name}"}
+
+
+def bloco_parametros(numeros, &block)
+  if block_given?
+    numeros.each do |key, value|
+      block.call(key, value)
+    end
+  end
+end
+
+numeros_hash = { 2 => 2, 3 => 3, 4 => 4 }
+
+#1º parametro passamos um hash    2ºÉ o bloco para ser executado 
+bloco_parametros(numeros_hash) do |key, value|
+  puts "#{key} * #{value} = #{key * value}"
+  puts "#{key} + #{value} = #{key + value}"
+  puts "---"*3
+end
