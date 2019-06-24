@@ -8,5 +8,4 @@ print 'Agora digite seu preço: '
 preco_produto = gets.chomp.to_f
 
 produto_novo = Produto.new(nome_produto, preco_produto)
-meu_mercado = Mercado.new(produto_novo)
-meu_mercado.comprar
+meu_mercado = Mercado.new(produto_novo).comprar
