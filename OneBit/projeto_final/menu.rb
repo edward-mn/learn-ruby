@@ -18,17 +18,17 @@ class Menu
     opcao = gets.chomp.to_i
     unless opcao == ''
     case opcao
-      when 1
-        define_imputs(AvaliableLanguages)
-      when 2
-        define_imputs(DetectLanguage)
-      when 3
-        define_imputs(TranslateLanguage)
-      when 0
-        exit 
-      else
-        puts "Sorry,has not a functionality for option #{opcao}"
-      end
+    when 1
+      define_imputs(AvaliableLanguages)
+    when 2
+      define_imputs(DetectLanguage)
+    when 3
+      define_imputs(TranslateLanguage)
+    when 0
+      exit 
+    else
+      puts "Sorry,has not a functionality for option #{opcao}"
+    end
     end
   end
 
@@ -41,7 +41,7 @@ class Menu
     elsif _class == DetectLanguage
       print 'Please insert a phrase to detect the laguage that was used: '
       text = gets.chomp
-      unless text == ''
+      if text == ''
         puts "Detect Language..."
         _class = DetectLanguage.new(text)
       else
@@ -52,11 +52,16 @@ class Menu
       text = gets.chomp
       print 'Now insert the code that you have seen on the Avaliable Languages: '
       code = gets.chomp
-      unless text == '' || code == ''
-        puts "Translate Language..."
-        _class = TranslateLanguage.new(text, code)
-      else
+      if text == '' || code == ''
         puts "#{MSG_ERROR + ' and a code'}"
+      else
+        if code.length == 2
+          puts "Translate Language..."
+          _class = TranslateLanguage.new(text, code)
+        else
+          puts "Sorry, but the code must be contain only 2 letters"
+          exit
+        end
       end
     end
   end
