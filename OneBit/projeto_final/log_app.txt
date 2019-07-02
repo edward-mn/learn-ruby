@@ -1,0 +1,106 @@
+The user used the functionality List of Languages Avaliable to Translate of API
+Language: Afrikaans - Code: af
+Language: Amharic - Code: am
+Language: Arabic - Code: ar
+Language: Azerbaijani - Code: az
+Language: Bashkir - Code: ba
+Language: Belarusian - Code: be
+Language: Bulgarian - Code: bg
+Language: Bengali - Code: bn
+Language: Bosnian - Code: bs
+Language: Catalan - Code: ca
+Language: Cebuano - Code: ceb
+Language: Czech - Code: cs
+Language: Welsh - Code: cy
+Language: Danish - Code: da
+Language: German - Code: de
+Language: Greek - Code: el
+Language: English - Code: en
+Language: Esperanto - Code: eo
+Language: Spanish - Code: es
+Language: Estonian - Code: et
+Language: Basque - Code: eu
+Language: Persian - Code: fa
+Language: Finnish - Code: fi
+Language: French - Code: fr
+Language: Irish - Code: ga
+Language: Scottish Gaelic - Code: gd
+Language: Galician - Code: gl
+Language: Gujarati - Code: gu
+Language: Hebrew - Code: he
+Language: Hindi - Code: hi
+Language: Croatian - Code: hr
+Language: Haitian - Code: ht
+Language: Hungarian - Code: hu
+Language: Armenian - Code: hy
+Language: Indonesian - Code: id
+Language: Icelandic - Code: is
+Language: Italian - Code: it
+Language: Japanese - Code: ja
+Language: Javanese - Code: jv
+Language: Georgian - Code: ka
+Language: Kazakh - Code: kk
+Language: Khmer - Code: km
+Language: Kannada - Code: kn
+Language: Korean - Code: ko
+Language: Kyrgyz - Code: ky
+Language: Latin - Code: la
+Language: Luxembourgish - Code: lb
+Language: Lao - Code: lo
+Language: Lithuanian - Code: lt
+Language: Latvian - Code: lv
+Language: Malagasy - Code: mg
+Language: Mari - Code: mhr
+Language: Maori - Code: mi
+Language: Macedonian - Code: mk
+Language: Malayalam - Code: ml
+Language: Mongolian - Code: mn
+Language: Marathi - Code: mr
+Language: Hill Mari - Code: mrj
+Language: Malay - Code: ms
+Language: Maltese - Code: mt
+Language: Burmese - Code: my
+Language: Nepali - Code: ne
+Language: Dutch - Code: nl
+Language: Norwegian - Code: no
+Language: Punjabi - Code: pa
+Language: Papiamento - Code: pap
+Language: Polish - Code: pl
+Language: Portuguese - Code: pt
+Language: Romanian - Code: ro
+Language: Russian - Code: ru
+Language: Sinhalese - Code: si
+Language: Slovak - Code: sk
+Language: Slovenian - Code: sl
+Language: Albanian - Code: sq
+Language: Serbian - Code: sr
+Language: Sundanese - Code: su
+Language: Swedish - Code: sv
+Language: Swahili - Code: sw
+Language: Tamil - Code: ta
+Language: Telugu - Code: te
+Language: Tajik - Code: tg
+Language: Thai - Code: th
+Language: Tagalog - Code: tl
+Language: Turkish - Code: tr
+Language: Tatar - Code: tt
+Language: Udmurt - Code: udm
+Language: Ukrainian - Code: uk
+Language: Urdu - Code: ur
+Language: Uzbek - Code: uz
+Language: Vietnamese - Code: vi
+Language: Xhosa - Code: xh
+Language: Yiddish - Code: yi
+Language: Chinese - Code: zh
+
+Time: 07/02/2019 - 11:11:41
+--------------------------------------------------
+The user used the functionality Language Identification of API
+Text: Batata - Language found was: pt
+Time: 07/02/2019 - 11:12:01
+--------------------------------------------------
+The user used the functionality Translating the Language of API
+Text: Vamos almoçar? para en 
+Result: Let's go out for lunch?
+Time: 07/02/2019 - 11:13:20
+--------------------------------------------------
