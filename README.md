@@ -10,6 +10,10 @@ Repository created for my learning on Ruby and Ruby on Rails
 - Curso de Ruby on Rails - Udemy(TDD): [**Link**](https://www.udemy.com/rails-tdd/)
 - Apostila Caelum: [**Link**](https://www.caelum.com.br/apostila-ruby-on-rails/)
 - Apostila Learn Enough: [**Link**](https://www.learnenough.com/courses)
+- Curso programação Web(HTML5): [**Link**](https://www.youtube.com/watch?v=epDCjksKMok&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o)
+- Curso programação Web(JavaScript): [**Link**](https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4)
+- Curso programação Web(HTML5, CSS3 e JavaScript): [**Link**](https://www.youtube.com/watch?v=EiZbhsVY2Dk&list=PLwgL9IEA0PxUjbhob9UMdpVq12sGrjgU6)
+
 
 [License-badge]: https://img.shields.io/github/license/Edwardpg/learn-ruby.svg
 [License]: https://opensource.org/licenses/MIT
