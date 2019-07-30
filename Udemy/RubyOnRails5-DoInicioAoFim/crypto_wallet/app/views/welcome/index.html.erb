@@ -2,19 +2,10 @@
 <p>
   Edward Moreira
 </p>
-<p> <strong>Data:</strong> <%= br_date(Date.today) %> </p>
-<p> Estamos utilizando o ambiente de <%= ambiente_rails %> do rails </p>
+<p> <strong>Data: </strong><%= br_date(Date.today) %> </p>
+<p> Estamos utilizando o ambiente de <strong><%= ambiente_rails %></strong> do rails </p>
 <p> Eu sou uma variável de instância/sessão <%= @nome %> </p>
-<ul>
-    <li>
-        <a href='/coins'> Cadastro de Moedas - HTML</a>
-    </li>
-    <li>
-        <%= link_to('Cadastro de Moedas - Ruby', coins_path)%>
-    </li>
-</ul>
-
-
+<%= render("menu")%>
 <!--
 <p> Usando Ruby e sua soma é: <%= 1 + 1 %> </p>
 <p> Seu nome de trás para frente é: <%= 'Edward'.reverse %> </p>
