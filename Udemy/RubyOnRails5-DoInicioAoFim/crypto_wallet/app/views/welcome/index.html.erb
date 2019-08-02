@@ -2,7 +2,11 @@
 <p>
   Edward Moreira
 </p>
-<p> <strong>Data: </strong><%= br_date(Date.today) %> </p>
+<p>
+  O idioma utilizado nesta aplicação é: <strong> <%= locale %> </strong>
+</p>
+<p> Um simples teste de tradução <%= t('hello') %> </p>
+<p> <strong>Data: </strong><%= l(Date.today) %> </p>
 <p> Estamos utilizando o ambiente de <strong><%= ambiente_rails %></strong> do rails </p>
 <p> Eu sou uma variável de instância/sessão <%= @nome %> </p>
 <%= render("menu")%>

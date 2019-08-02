@@ -30,4 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
+  links:
+    show: 'Show'
+    sdit: 'Edit'
+    destroy: 'Destroy'
+    back: 'Back'
+    havesure: 'Do you have sure?'
+    description: 'Description'
+    acronym: 'Acronym'
+    url_image: 'Image'
+    coins: 'Coins'
+    mining_types: 'Mining Types'

@@ -7,8 +7,8 @@ namespace :dev do
       show_spinner('Deletando') { %x(rails db:drop) }
       show_spinner('Criando') { %x(rails db:create) }
       show_spinner('Migrando') { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     end
 
     desc 'Cadastra moedas'
@@ -60,8 +60,14 @@ namespace :dev do
     {
       description: name_coin,
       acronym: acronym_coin,
-      url_image: url_image_coin
+      url_image: url_image_coin,
+      mining_type: MiningType.all.sample
     }
+#MiningType.where(acronym: 'PoW') = Retorna vários registros
+#MiningType.where(acronym: 'PoW').first = Retorna somente o primeiro elemento
+#MiningType.find(acronym: 'PoW') = Aceita somente ID
+#MiningType.find_by(acronym: 'PoW') = Permite diversas pesquisar
+#MiningType.all.sample = Randon das opçãos do controler MiningType
   end
 end
 #Criando task (rails g task <NameSpace> <NomeTask>)

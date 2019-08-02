@@ -1,6 +1,7 @@
 class CoinsController < ApplicationController
   layout("adm")
   before_action :set_coin, only: [:show, :edit, :update, :destroy]
+  before_action :set_mining_type_options, only: [:new, :create, :edit, :update]
 
   # GET /coins
   # GET /coins.json
@@ -70,6 +71,10 @@ class CoinsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def coin_params
-    params.require(:coin).permit(:description, :acronym, :url_image)
+    params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id)
+  end
+
+  def set_mining_type_options
+    @mining_type_options = MiningType.all.pluck(:description, :id)
   end
 end

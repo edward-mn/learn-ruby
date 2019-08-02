@@ -1,0 +1,14 @@
+#Toda tradução para pt-BR fica centralizada neste arquivo
+pt-BR:
+  hello: 'Olá'
+  links:
+    show: 'Mostrar'
+    edit: 'Editar'
+    back: 'Voltar'
+    destroy: 'Destruir'
+    havesure: 'Você tem certeza?'
+    description: 'Descrição'
+    acronym: 'Sigla'
+    url_image: 'Imagem'
+    coins: 'Moedas'
+    mining_types: 'Tipos de Mineração'
