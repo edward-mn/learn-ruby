@@ -2,10 +2,10 @@
 
 <h1><%= t('links.mining_types') %></h1>
 
-<table>
+<table class='table table-dark table-hover'>
   <thead>
     <tr>
-      <th><%= t('links.description') %></th>
+      <th><%= @mining_types.human_attribute_name(:description) %></th>
       <th><%= t('links.acronym') %></th>
       <th colspan="3"></th>
     </tr>

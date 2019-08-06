@@ -1,5 +1,6 @@
 #Toda tradução para pt-BR fica centralizada neste arquivo
 pt-BR:
+  actual_locale: 'Português do Brasil'
   hello: 'Olá'
   links:
     show: 'Mostrar'

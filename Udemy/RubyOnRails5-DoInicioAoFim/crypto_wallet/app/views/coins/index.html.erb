@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= t('links.coins') %></h1>
+<h2><%= cookies[:curso]%></h2>
+<h2><%= session[:curso]%></h2>
 
-<table>
+<table class='table table-dark table-hover'>
   <thead>
     <tr>
-      <th><%= t('links.description') %></th>
-      <th><%= t('links.acronym') %></th>
+      <!-- 3 maneiras diferentes de fazer a tradução -->
+      <th><%= @coins.human_attribute_name(:description) %></th>
+      <th><%= t('activerecord.attributes.coin.acronym') %></th>
       <th><%= t('links.url_image') %></th>
       <th colspan="3"></th>
     </tr>

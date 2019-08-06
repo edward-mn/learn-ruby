@@ -1,16 +1,25 @@
-<h1>Seja Bem-Vindo!</h1>
+<div class="jumbotron">
+  <h1 class="display-4">Seja, Bem-Vindo!</h1>
+  <p class="lead">Este é o Crypto Wallet, uma app para você cadastrar e acompanhar as suas cripto wallets.</p>
+  <hr class="my-4">
+  <p>Para começar selecione uma das opções abaixo:</p>
+  <%= render "menu" %>
+</div>
+
+
+
+<!--
 <p>
   Edward Moreira
 </p>
 <p>
-  O idioma utilizado nesta aplicação é: <strong> <%= locale %> </strong>
+  O idioma utilizado nesta aplicação é: <strong> <%= t('actual_locale') %> </strong>
 </p>
 <p> Um simples teste de tradução <%= t('hello') %> </p>
 <p> <strong>Data: </strong><%= l(Date.today) %> </p>
 <p> Estamos utilizando o ambiente de <strong><%= ambiente_rails %></strong> do rails </p>
 <p> Eu sou uma variável de instância/sessão <%= @nome %> </p>
-<%= render("menu")%>
-<!--
+
 <p> Usando Ruby e sua soma é: <%= 1 + 1 %> </p>
 <p> Seu nome de trás para frente é: <%= 'Edward'.reverse %> </p>
 #utilizando o '=' no '%=' ele ira mostrar na tela, se não utilizarmos ele fará mas não irá mostrar

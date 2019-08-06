@@ -21,6 +21,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  #if you want solve the issue, put true or in terminal RAILS_SERVE_STATIC_FILES=true rails s -e production
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
