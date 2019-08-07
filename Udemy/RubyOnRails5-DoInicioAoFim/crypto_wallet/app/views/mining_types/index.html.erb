@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('links.mining_types') %></h1>
+<h1><%= MiningType.model_name.human(count: @mining_types.count) %></h1>
 
 <table class='table table-dark table-hover'>
   <thead>
     <tr>
       <th><%= @mining_types.human_attribute_name(:description) %></th>
-      <th><%= t('links.acronym') %></th>
+      <th><%= t('acronym') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
         <td><%= mining_type.acronym %></td>
         <td><%= link_to t('links.show'), mining_type %></td>
         <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t('links.destroy'), mining_type, method: :delete, data: { confirm: t('links.havesure') } %></td>
+        <td><%= link_to t('links.destroy'), mining_type, method: :delete, data: { confirm: t('messages.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +26,5 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %> |
-<%= link_to t('links.back'), welcome_index_path%>
+<%= link_to t('new.mining_type'), new_mining_type_path, class:"btn btn-primary" %>
+<%= link_to t('links.back'), welcome_index_path, class:"btn btn-secondary"%>
