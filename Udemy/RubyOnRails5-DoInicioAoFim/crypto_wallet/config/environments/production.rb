@@ -24,7 +24,7 @@ Rails.application.configure do
   #if you want solve the issue, put true or in terminal RAILS_SERVE_STATIC_FILES=true rails s -e production
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmany: true, compress: { unused: false })
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
