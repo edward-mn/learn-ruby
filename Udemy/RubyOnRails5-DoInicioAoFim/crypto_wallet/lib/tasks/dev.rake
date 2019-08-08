@@ -10,41 +10,41 @@ namespace :dev do
       %x(rails dev:add_mining_types)
       %x(rails dev:add_coins)
     end
-
-    desc 'Cadastra moedas'
-    task add_coins: :environment do
-      show_spinner('Populando') do
-        coins =
-          [
-            registring_coins('BitCoin', 'BTC', 'http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png'),
-            registring_coins('Ethereum', 'ETH', 'https://hype.codes/sites/default/files/icons_for_articles/yellow/crypto/ethereum.png'),
-            registring_coins('Dash', 'DASH', 'https://media.dash.org/wp-content/uploads/Dash-D-white.png'),
-            registring_coins('Iota', 'IOT', 'https://cdn3.iconfinder.com/data/icons/cryptoicons-glyph-pack/256/IOTA_Glyph-512.png'),
-            registring_coins('ZCash', 'ZEC', 'https://cdn4.iconfinder.com/data/icons/cryptocurrency-vanilla-coins/90/Coin-ZEC-Vanilla-512.png')
-          ]
-
-        coins.each do |coin|
-          Coin.find_or_create_by!(coin)
-        end
-      end
-    end
-
-    desc 'Cadastra os tipos de mineração'
-    task add_mining_types: :environment do
-      show_spinner('Populando tipos de mineração') do
-        mining_types = [
-          {description: 'Proof of Work', acronym: 'PoW'},
-          {description: 'Proof of Stake', acronym: 'PoS'},
-          {description: 'Proof of Capacity', acronym: 'PoC'}
-        ]
-
-        mining_types.each do |mining_type|
-          MiningType.find_or_create_by!(mining_type)
-        end
-      end
-    end
   else
     puts 'Não é possível executar esta task neste ambiente'
+  end
+
+  desc 'Cadastra moedas'
+  task add_coins: :environment do
+    show_spinner('Populando') do
+      coins =
+        [
+          registring_coins('BitCoin', 'BTC', 'http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png'),
+          registring_coins('Ethereum', 'ETH', 'https://hype.codes/sites/default/files/icons_for_articles/yellow/crypto/ethereum.png'),
+          registring_coins('Dash', 'DASH', 'https://media.dash.org/wp-content/uploads/Dash-D-white.png'),
+          registring_coins('Iota', 'IOT', 'https://cdn3.iconfinder.com/data/icons/cryptoicons-glyph-pack/256/IOTA_Glyph-512.png'),
+          registring_coins('ZCash', 'ZEC', 'https://cdn4.iconfinder.com/data/icons/cryptocurrency-vanilla-coins/90/Coin-ZEC-Vanilla-512.png')
+        ]
+
+      coins.each do |coin|
+        Coin.find_or_create_by!(coin)
+      end
+    end
+  end
+
+  desc 'Cadastra os tipos de mineração'
+  task add_mining_types: :environment do
+    show_spinner('Populando tipos de mineração') do
+      mining_types = [
+        {description: 'Proof of Work', acronym: 'PoW'},
+        {description: 'Proof of Stake', acronym: 'PoS'},
+        {description: 'Proof of Capacity', acronym: 'PoC'}
+      ]
+
+      mining_types.each do |mining_type|
+        MiningType.find_or_create_by!(mining_type)
+      end
+    end
   end
 
   private
