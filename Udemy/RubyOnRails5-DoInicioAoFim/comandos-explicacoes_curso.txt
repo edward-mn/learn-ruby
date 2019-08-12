@@ -1,0 +1,54 @@
+- Gerando um novo app com um banco de dados específico
+rails new (nome_app) -d (banco_dados)
+rails new market_place -d postgresql
+
+- Gerando um novo controller junto com uma ação
+rails (generate ou g) controller (nome_controller) (nome_acao)
+rails g controller welcome index
+
+- Removendo um controller
+rails (d ou destroy) controller (nome_controller)
+rails d controller welcome
+
+- Criar ou definir uma rota padrão
+config/routes.rb
+ root to:'(nome_controller#nome_ação)'
+ root to: 'welcome#index'
+
+- Também podemos dizer para uma determinada rota redirecionar para outro lugar
+ get (nome_rota), to: '(nome_controller#nome_ação)'
+ get 'inicio', to: 'welcome#index'
+
+- Criando um novo app sem os testes
+rails new (nome_app) -T
+Sempre que fazer isso lembrar de fazer os devidos ajustes em config/application.rb, pegar os requires e também adicionar a linha que desabilita a criação dos testes com a task generate
+
+- Rails utiliza o spring por trás da aplicação, podes ser uma execução do mesmo em segundo plano ou pré compilação, sempre que for feito alguma alteração é necessário reiniciar tal aplicação
+spring status (verificar o status do spring)
+spring stop (para o spring da aplicação)
+
+- Colocando uma autenticação básica em HTTP
+http_basic_authenticate_with name: 'edward', password: '123'
+
+- Para fazer autenticação do usuário passamos a utilizar uma gem chamada Devise
+Todas informações necessárias está centralizada no repositório (https://github.com/plataformatec/devise#getting-started)
+ 1: Instalar gem ; 2: Rodar rails g devise:install ; 3: Define localhost:3000 para grupo develpoment (config/environments/development)
+ 4: Em config/initializers/devise.rb adicionar (config.scoped_views = true) caso haja necessidade de fazer views separadamente
+ 5: Migrar elas (rails db:migrate)
+
+- Deixar a aplicação multi idioma (gem i18n)
+Todas informações necessárias está centralizada no repositório (https://github.com/svenfuchs/rails-i18n)
+
+- Flash traduzidas pela i18n (isso resulta somente nos erros das views)
+va para views/admins/sessions/new.html.erb
+
+- Criei um arquivo chamado models.pt-BR, para fazer as traduções dos models
+Consigo saber quais campos a serem traduzidos pelo schema ou as migrations (db/migrate ou db/scheema.rb)
+
+- Criar subpastas com a hierarquia correta para os devises
+rails g controller (nome_pasta)/(nome_controller) (acao)
+rails g controller admins_backoffice/welcome index
+
+- Para determinar outro redirecionamento basta alterarmos a herança dentro do controller e com isso adicionar o layout correto para seu controller específico
+layou 'admins_backoffice' - Pai
+class AdminsBackoffice::WelcomeController < AdminsBackofficeController - Filho
