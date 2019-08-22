@@ -1,12 +1,12 @@
-'pt-BR'
+pt-BR:
   activerecord:
     models:
       admin:
         one: Adiministrador
         other: Administradores
-      profile:
-        one: Perfil
-        other: Perfis
+      user:
+        one: Usuário
+        other: Usuários
     attributes:
       admin:
         id: Código
@@ -14,7 +14,7 @@
         password: Senha
         created_at: Criado em
         update_at: Atualizado em
-      profile:
+      user:
         id: Código
         email: Email
         password: Senha

@@ -52,3 +52,78 @@ rails g controller admins_backoffice/welcome index
 - Para determinar outro redirecionamento basta alterarmos a herança dentro do controller e com isso adicionar o layout correto para seu controller específico
 layou 'admins_backoffice' - Pai
 class AdminsBackoffice::WelcomeController < AdminsBackofficeController - Filho
+
+- Para que seja feita a validação se o usuário está logado no sistema é preciso adicionar uma action no controller Pai
+before_action :authenticate_(nome_model)!
+before_action :authenticate_admin!
+
+- Removendo coisas (nomenclatura ficou errada, então é preciso refazer com nome correto)
+rails d devise Profile (remove o devise profile)
+rails d controller profiles_backoffice/welcome
+rails d controller profiles_backoffice
+
+- Criando com o nome correto
+rails g devise User
+rails g devise:views users
+rails g controller users_backoffice/welcome
+rails g controller users_backoffice
+
+- Caso esqueca de Adicionar uma Action (Rota para determinada ação)
+1º Adicione no controller filho o método (def index end)
+2º Dentro da pasta adicione um arquivo com o nome do método (index.html.erb) >layouts/users_backoffice/index.html.erb
+3º Coloque o conteúdo dentro do mesmo arquivo, Exp:
+<h1>UsersBackoffice::Welcome#index</h1>
+<p>Find me in app/views/users_backoffice/welcome/index.html.erb</p>
+4º Arrume a rota em routes.rb
+Done
+
+- Criando rake task
+rails g task <Nome  Acao>
+rails g task dev setup
+É necessário deixar este espaço para que fique no padrão correto, pois depois de gerado o resultado será rails g task dev::setup
+
+Visualizando valores dentro de um objeto
+- nome_objeto.inspect
+Assim que for visualizado pode ser alterado para campo desejado
+- nome_objeto.ID
+
+
+Quando quiser criar um link com um método olhar em (link_app/rails/info/routes), ver o método e o path após isso é só colocar no app
+- <%= link_to 'Menssagem', path, method: :nome_method %>
+- <%= link_to 'Fazer logoof [usuário]', destroy_user_session_path, method: :delete %>
+
+Toda esplicação necessária para migralção de templates no Rails está nesste artigo e vídeo
+- https://videosdeti.com.br/post-video-migrando-um-template-html-para-o-ruby-on-rails/
+Vale resaltar que é muito importante saber e utilizar a mesma versão dos plugins que são necessario de acordo com seu template
+Exp: Udemy/RubyOnRails5-DoInicioAoFim/time_to_answer/public/templates/startbootstrap-sb-admin-2/vendor/bootstrap/scss/bootstrap.scss
+Tem a definição de qual versão está sendo utilizada do BootStrap (Bootstrap v4.3.1 (https://getbootstrap.com/)) então utilizamos exatamente a mesma versão
+
+
+https://colorlib.com/polygon/gentelella/
+https://github.com/puikinsh/gentelella/
+
+https://startbootstrap.com/template-overviews/sb-admin-2/
+
+Instalar npm globalmente através do apt-get
+sudo apt-get install npm
+
+Instalar yarn globalmente através do npm
+sudo npm install --global yarn
+
+Dentro do projeto inicializar o yarn para fazer o controle de pacotes
+- yarn init
+Todas informações vinculadas a ele, é possível visualizar dentro:
+   Pasta: node_modules
+     Arquivo: package.json
+
+Uma boa escolha é remover os turbolinks, pois as vezes ele pode conflitar com pacotes que foram instalados para isso:
+- Comente a gem dentro de gemfile (gem 'turbolinks', '~> 5')
+- Remova a requerimento dentro de assets/application.js (//= require turbolinks)
+- Remova a requerimento view/layouts (
+                                        media: 'all', 'data-turbolinks-track': 'reload'
+                                        'data-turbolinks-track': 'reload'
+                                     )
+
+** Apagar os (*= require_tree), assim não é chamado todos os arquivos sendo eles css e javascript
+
+
