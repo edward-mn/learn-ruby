@@ -126,4 +126,15 @@ Uma boa escolha é remover os turbolinks, pois as vezes ele pode conflitar com p
 
 ** Apagar os (*= require_tree), assim não é chamado todos os arquivos sendo eles css e javascript
 
+ambos js
+Chart.js v2.8.0
+DataTables 1.10.19
+metis menu 1.1.3
 
+require font-awesome/css/font-awesome
+*= require bootstrap/dist/css/bootstrap
+*= href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"
+
+//= require @fortawesome/fontawesome-free/js/all
+//= require metismenu/dist/metisMenu
+//= require popper.js/dist/popper
