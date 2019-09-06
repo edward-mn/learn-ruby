@@ -6,7 +6,7 @@ Repository created for my learning on Ruby and Ruby on Rails
 # Courses
 - [X] Curso One Bit Code - Ruby puro: [**Link**](https://onebitcode.com/course/ruby-puro/) - :heavy_check_mark:
 - [X] Curso de Ruby para iniciantes - Udemy: [**Link**](https://www.udemy.com/ruby-para-iniciantes/) - :heavy_check_mark:
-- [ ] Livro de Ruby "Programming Ruby - The Pragmatic Programmers' Guid 1.9": [**Link**](https://doc.lagout.org/programmation/Ruby/Programming%20Ruby%201.9%203rd%20Edition.pdf)
+- [ ] Livro de Ruby "Programming Ruby - The Pragmatic Programmers' Guid 1.9 :book: ": [**Link**](https://doc.lagout.org/programmation/Ruby/Programming%20Ruby%201.9%203rd%20Edition.pdf)
 - [ ] Curso de Ruby on Rails - Udemy: [**Link**]( https://www.udemy.com/rubyonrails-5x/) - :construction:
  - Cripto Wallet app: [**Link**](https://crypto-wallet-edward.herokuapp.com/) - :heavy_check_mark:
  - Time to Answer app: :construction:
