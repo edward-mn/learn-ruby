@@ -138,3 +138,18 @@ require font-awesome/css/font-awesome
 //= require @fortawesome/fontawesome-free/js/all
 //= require metismenu/dist/metisMenu
 //= require popper.js/dist/popper
+
+- Importantdo um templete
+1º Salva-lo dentro de Public/templates
+2º Copiar todo html que desejar para a view que desejado
+3º Separar CSS de javascript
+4º Instalar todos as dependencias, nas VERSÕES CORRESPONDENTE (através do yarn)
+5º Adicionar o path dentros dos assets
+6º Fazer a alteração também dentro de Config/assets, para que haja a pré compilação
+7º Caso haja algum template personalizado, copiar o arquivo e colocar dentro de lib/assets
+
+
+<%= link_to destroy_admin_session_path, method: :delete do %>
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Sair
+                  <% end %>
