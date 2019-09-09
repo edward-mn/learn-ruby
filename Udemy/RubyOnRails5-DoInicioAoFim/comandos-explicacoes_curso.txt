@@ -147,3 +147,8 @@ require font-awesome/css/font-awesome
 5º Adicionar o path dentros dos assets
 6º Fazer a alteração também dentro de Config/assets, para que haja a pré compilação
 7º Caso haja algum template personalizado, copiar o arquivo e colocar dentro de lib/assets
+
+Gem awesome-print
+Possibilita a formatação de dados quando estamos trabalhando no console, ficando muito mais fácil a vizualização e interpretação dos retornados
+- ap Model.atribute
+- ap Admin.all
