@@ -152,3 +152,15 @@ Gem awesome-print
 Possibilita a formatação de dados quando estamos trabalhando no console, ficando muito mais fácil a vizualização e interpretação dos retornados
 - ap Model.atribute
 - ap Admin.all
+
+Criação de rotas - Resources
+  namespace :admins_backoffice do
+  # Utilizando Resources e delimitando-o
+    get 'welcome/index' # Dashboard
+    resources :admins, only: [:index] # Administradores
+
+   # Criando as rotas a mão (não é viável pois não é dinâmico)
+    get 'admins/index'
+    get 'admins/edit/:id', to: 'admins#edit'
+    Criando os resources a mão
+  end

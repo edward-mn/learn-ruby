@@ -1,28 +1,29 @@
-<!--<%= @admins.inspect %> Utilizando a variável de instância para listar todos admins -->
-
+<!--<%= @admins.inspect %> Printando o valor completo da variável -->
 <h1>Lista Admins</h1>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Email</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= @admins.each do |admin| %>
-    <tr>
-      <th><%= admin.id %></th>
-      <td><%= admin.email %></td>
-      <td>
-        <a class="btn btn-danger btn-circle">
-          <i class="fas fa-trash"></i>
-        </a>
-        <a class="btn btn-primary btn-circle">
-          <i class="fas fa-edit"></i>
-        </a>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Email</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @admins.each do |admin| %>
+      <tr>
+        <td><%= admin.id %></td>
+        <td><%= admin.email %></td>
+        <td>
+          <a class="btn btn-danger btn-circle">
+            <i class="fas fa-trash"></i>
+          </a>
+          <a class="btn btn-primary btn-circle">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
