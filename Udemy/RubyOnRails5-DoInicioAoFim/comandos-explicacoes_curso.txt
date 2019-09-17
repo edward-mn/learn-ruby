@@ -164,3 +164,7 @@ Criação de rotas - Resources
     get 'admins/edit/:id', to: 'admins#edit'
     Criando os resources a mão
   end
+
+Form with, sempre que foi salvo algo na página há a necessidade de renderização podemos fazer assim
+  form_with(model: [ name_space, variavel_instancia], local: true) - [local: true] determina a renderização ou update para ser feito com html
+  form_with(model: [ :admins_backoffice, @admin], local: true)
