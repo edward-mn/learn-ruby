@@ -173,3 +173,6 @@ Verificando se o Objeto possui algum erro ao tentar fazer o CRUD
   Objeto.erros
   Objeto.erros.any?
   Objeto.erros.full_messages
+
+Para descobrir qual ação o rails está executando utilizamos
+<%= action_name %>
