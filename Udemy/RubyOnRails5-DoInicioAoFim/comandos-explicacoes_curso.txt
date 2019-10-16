@@ -181,3 +181,11 @@ Form with
  - Podemos padrão o form_with utiliza JavaScript, mas se quisermos trabalhar com HTML é necessário informar com local: true
 Exmp
   <%= form_with(model: [ :admins_backoffice, @admin], local: true) do |form| %>
+
+Lembrar sempre que toda partil, começa com "_"
+Exmp: _form.html.erb
+
+Renderizando uma partial
+Exmp: Basta informar o caminho do arquivo, se deseja passar alguma informação podemos usar o parâmetro locals.
+  <%= render partial: 'admins_backoffice/admins/shared/form',
+             locals: { action_message: 'Novo'} %>
