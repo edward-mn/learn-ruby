@@ -176,3 +176,8 @@ Verificando se o Objeto possui algum erro ao tentar fazer o CRUD
 
 Para descobrir qual ação o rails está executando utilizamos
 <%= action_name %>
+
+Form with
+ - Podemos padrão o form_with utiliza JavaScript, mas se quisermos trabalhar com HTML é necessário informar com local: true
+Exmp
+  <%= form_with(model: [ :admins_backoffice, @admin], local: true) do |form| %>
