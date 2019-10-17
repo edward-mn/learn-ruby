@@ -1,3 +1,10 @@
+Campo Text e Campo String Banco de dados:
+  Text = Mais de 1 linha
+
+  String = Apenas 1 linha (256 caracteres)
+- Model sempre Singular
+  Subject, Question
+
 - Gerando um novo app com um banco de dados específico
 rails new (nome_app) -d (banco_dados)
 rails new market_place -d postgresql
@@ -189,3 +196,7 @@ Renderizando uma partial
 Exmp: Basta informar o caminho do arquivo, se deseja passar alguma informação podemos usar o parâmetro locals.
   <%= render partial: 'admins_backoffice/admins/shared/form',
              locals: { action_message: 'Novo'} %>
+
+Criando uma Referência para outra tabela
+- rails generate model nome_model atributo_model:tipo_atributo nome_model_referenciado:references
+Exmp: rails g model question description:text subject:references
