@@ -13,7 +13,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   def create
     @subject = Subject.new(params_subject)
     if @subject.save
-      redirect_to subjects_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Criado')
+      redirect_to admins_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Criado')
     else
       render :new
     end
@@ -21,7 +21,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def update
     if @subject.update(params_subject)
-      redirect_to subjects_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Atualizado')
+      redirect_to admins_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Atualizado')
     else
       render :edit
     end
@@ -29,7 +29,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def destroy
     if @subject.destroy
-      redirect_to subjects_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Excluído')
+      redirect_to admins_backoffice_subjects_path, notice: helpers.message_notify(NAME_SPACE_SUBJECT, 'Excluído')
     else
       render :index
     end
@@ -38,10 +38,10 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   private
 
   def set_subject
-    @subject = subject.find(params[:id])
+    @subject = Subject.find(params[:id])
   end
 
   def params_subject
-    params.require(:subject).permit(:email, :password, :password_confirmation)
+    params.require(:subject).permit(:description)
   end
 end
