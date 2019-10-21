@@ -3,7 +3,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   NAME_SPACE_SUBJECT = 'Subject'
 
   def index
-    @subjects = Subject.all.page(params[:page])
+    @subjects = Subject.all.order(:description).page(params[:page])
   end
 
   def new

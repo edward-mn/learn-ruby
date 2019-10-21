@@ -200,3 +200,7 @@ Exmp: Basta informar o caminho do arquivo, se deseja passar alguma informação 
 Criando uma Referência para outra tabela
 - rails generate model nome_model atributo_model:tipo_atributo nome_model_referenciado:references
 Exmp: rails g model question description:text subject:references
+
+Para ordenar em ordem Alfabética, utilizamos o order + campo que deseja
+Exmp
+  @subjects = Subject.all.order(:description)
