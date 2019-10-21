@@ -1,12 +1,7 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
   before_action :verify_password, only: [:update]
   before_action :set_admin, only: %i[edit update destroy]
-
-  def edit; end
-
-  def show; end
-
-  def post; end
+  NAME_SPACE_ADMIN = 'Admin'
 
   def index
     @admins = Admin.all.page(params[:page])
@@ -19,7 +14,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify('Criado')
+      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify(NAME_SPACE_ADMIN, 'Criado')
     else
       render :new
     end
@@ -27,7 +22,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def update
     if @admin.update(params_admin)
-      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify('Atualizado')
+      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify(NAME_SPACE_ADMIN, 'Atualizado')
     else
       render :edit
     end
@@ -35,7 +30,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def destroy
     if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify('Excluído')
+      redirect_to admins_backoffice_admins_path, notice: helpers.message_notify(NAME_SPACE_ADMIN, 'Excluído')
     else
       render :index
     end

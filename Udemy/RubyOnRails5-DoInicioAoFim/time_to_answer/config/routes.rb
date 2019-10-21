@@ -12,8 +12,9 @@ Rails.application.routes.draw do
 
   namespace :admins_backoffice do
     get 'welcome/index' # Dashboard
+    resources :admins # Show all routes to Admins
+    resources :subjects # Show all routes to Subjects
     # get 'admins/destroy/:id'
-    resources :admins # Show all routes
     # resources :admins, only ou except: [:index, :edit] # Administradores
   end
 
