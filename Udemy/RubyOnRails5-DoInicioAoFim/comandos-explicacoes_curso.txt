@@ -204,3 +204,11 @@ Exmp: rails g model question description:text subject:references
 Para ordenar em ordem Alfabética, utilizamos o order + campo que deseja
 Exmp
   @subjects = Subject.all.order(:description)
+
+Copiando tudo de uma pasta para outra
+  cp -r app/views/admins_backoffice/admins/* app/views/admins_backoffice/questions
+
+Delimitar a exibição de uma informação (string)
+  truncate(QuantidadeCaracter)
+Exmp
+  truncate(80)
