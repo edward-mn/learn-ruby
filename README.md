@@ -1,4 +1,4 @@
-# Learn language Ruby and framework Rails (Ruby on Rails)
+# Learn language Ruby and framework Rails 🛤️💎
 ![Edward](https://img.shields.io/badge/Courses-Edward-yellow.svg)  [![github Licenses][License-badge]][License] ![](https://img.shields.io/badge/Linguagem-Ruby-violet.svg)
 
 Repository created for my learning on Ruby and Ruby on Rails
